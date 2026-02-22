@@ -1,4 +1,6 @@
-print("Welcome to (UNNAMED GAME)")
+line = "-" * 30
+
+print("Welcome to fiveStageGame")
 name = input("Input your name: ")
 health = 10
 start = (input(f"""Are you ready to proceed, {name}?
@@ -22,6 +24,7 @@ You hear something move in the hallway.
 choice_1 = str(input("""Choice A: Grab a flashlight and check the hallway
 Choice B: Lock the door and head to the rooftop
 """)).upper()
+print(line)
 if choice_1 == "A":
     print("""Damage: -2 HP
 You step into the dark. Something darts past you.
@@ -34,6 +37,7 @@ elif choice_1 == "B":
     print("""You ignore the noise. The stairwell door creaks open as you push through.
 Story continues: You reach the rooftop. The city is dark.
 """)
+print(line)
 # STAGE 2!!!
 print("""STAGE 2 | The Signal Tower
 
@@ -66,6 +70,7 @@ else:
     print("""Story continues: The transmitter activates.
 A direction appears: NORTH DISTRICT.
 """)
+print(line)
 # STAGE 3!!!
 print("""STAGE 3 | The Street Below
 
@@ -96,6 +101,7 @@ else:
     print("""Story continues: You reach the entrance to an underground subway station.
 """)
 # STAGE 4!!!
+print(line)
 print("""STAGE 4 | The Subway Tunnel
 
 Emergency lights flicker red. A train sits abandoned.
@@ -127,6 +133,7 @@ else:
     print("""Story continues: At the end of the tunnel, you find a control room glowing white.
 """)
 # STAGE 5!!!
+print(line)
 print("""STAGE 5 | The Control Room
 
 Inside is a large console connected to a massive antenna system. The screen reads:
