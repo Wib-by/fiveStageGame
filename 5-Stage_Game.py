@@ -166,3 +166,5 @@ The shadow in the streets vanishes. Your phone vibrates one last time:
 
 “Connection restored.”""")
     quit()
+
+# This might be my last shit of the week, since one day of coding made me damn tired haha.
