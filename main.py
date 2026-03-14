@@ -12,6 +12,10 @@ else:
     print(f"See you later, adventurer {name}")
     quit()
 print("Let us begin \n\n\n")
+def check_health(health):
+    if health <= 0:
+        print("Sorry pal. You blacked out. The signal will be waiting for someone else.")
+        quit()
 # STAGE 1!!!
 print("""STAGE 1 | The Blackout
 
@@ -62,12 +66,7 @@ The signal flickers stronger.
 else:
     print("Invalid choice. You hesitate and lose time.")
     quit()
-if health <= 0:
-    print(f"""You collapse before completion. The city remains dark.
-The signal waits for someone else, health reached {health}.""")
-    quit()
-else:
-    print("""Story continues: The transmitter activates.
+print("""Story continues: The transmitter activates.
 A direction appears: NORTH DISTRICT.
 """)
 print(line)
@@ -93,12 +92,7 @@ The shadow follows but never strikes.
 else:
     print("Invalid choice. You hesitate and lose time.")
     quit()
-if health <= 0:
-    print(f"""You collapse before completion. The city remains dark.
-The signal waits for someone else, health reached {health}.""")
-    quit()
-else:
-    print("""Story continues: You reach the entrance to an underground subway station.
+print("""Story continues: You reach the entrance to an underground subway station.
 """)
 # STAGE 4!!!
 print(line)
@@ -118,6 +112,7 @@ A screeching sound disorients you before the doors reopen.
 """)
     health -= 3
     print(f"""Health: {health}""")
+    check_health(health)
 elif choice_4 == "B":
     print("""You avoid the train.
 The voice grows clearer ahead.
@@ -125,12 +120,7 @@ The voice grows clearer ahead.
 else:
     print("Invalid choice. You hesitate and lose time.")
     quit()
-if health <= 0:
-    print(f"""You collapse before completion. The city remains dark.
-The signal waits for someone else, health reached {health}.""")
-    quit()
-else:
-    print("""Story continues: At the end of the tunnel, you find a control room glowing white.
+print("""Story continues: At the end of the tunnel, you find a control room glowing white.
 """)
 # STAGE 5!!!
 print(line)
@@ -153,18 +143,15 @@ The city lights begin to flicker back online.
 """)
     health -= 4
     print(f"""Health: {health}""")
+    check_health(health)
 else:
     print("Invalid choice. You hesitate and lose time.")
     quit()
-if health <= 0:
-    print(f"""You collapse before completion. The city remains dark.
-The signal waits for someone else, health reached {health}.""")
-    quit()
-elif health > 0:
-    print("""The signal spreads. Lights return across the skyline.
+print("""The signal spreads. Lights return across the skyline.
 The shadow in the streets vanishes. Your phone vibrates one last time:
 
 “Connection restored.”""")
-    quit()
+check_health(health)
+quit()
 
 # This might be my last shit of the week, since one day of coding made me damn tired haha.
